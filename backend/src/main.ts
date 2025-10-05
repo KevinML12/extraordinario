@@ -7,7 +7,7 @@ async function bootstrap() {
 
   // 1. Configurar CORS (Solución al error del navegador)
   app.enableCors({
-    origin: 'http://localhost:5174', // Asegúrate que este puerto es el de tu frontend
+    origin: 'http://localhost:5173', // Asegúrate que este puerto es el de tu frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });

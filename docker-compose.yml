@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: local-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: tu_password_segura # CAMBIA ESTO PARA QUE COINCIDA CON TU .ENV
+      POSTGRES_DB: taskapp_db
+    ports:
+      - "5432:5432"
+    volumes:
+      # Mantener los datos persistentes entre reinicios de Docker
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+    driver: local

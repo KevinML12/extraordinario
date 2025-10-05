@@ -1,0 +1,17 @@
+# Dependencias de Node
+node_modules
+**/node_modules
+
+# Archivos de NestJS
+/backend/dist
+/backend/.env
+
+# Archivos de Vite/React
+/frontend/dist
+/frontend/.env # aunque no se usa, buena práctica
+
+# Logs
+*.log
+
+# Docker
+.docker
